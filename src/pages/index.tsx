@@ -12,7 +12,7 @@ const Home: NextPage = (data:any) => {
   )
 }
 export const getServerSideProps: GetServerSideProps = async () => {
-  const { data } = await apolloClient.query({
+  const  {data} = await apolloClient.query({
     query: GetAllDocument,
   });
 
