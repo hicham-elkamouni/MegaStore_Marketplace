@@ -6,8 +6,8 @@ const Home: NextPage = (data:any) => {
   console.log(data);
   
   return (
-    <div className="text-5xl">
-      <h1>{data.data}</h1>
+    <div className="">
+      
     </div>
   )
 }
