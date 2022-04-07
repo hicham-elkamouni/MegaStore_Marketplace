@@ -1,9 +1,18 @@
 
-import React from 'react'
+import { useEffect } from 'react'
+import Headroom from "headroom.js";
 
 const Header = () => {
+
+    useEffect(() => {
+        let headroom = new Headroom(document.getElementById("headroom") as Node);
+        // initialise
+        headroom.init();
+    });
+
     return (
-        <div className=' p-9 flex w-full justify-between align-baseline'>
+
+        <header id='headroom' className=' p-9 flex w-full justify-between align-baseline'>
             <div className="w-2/12">
                 <h1 className="text-2xl font-bold">MEGASTORE</h1>
             </div>
@@ -46,7 +55,7 @@ const Header = () => {
                     <img className='h-full' src="https://img.icons8.com/wired/64/000000/shopping-bag--v1.png" />
                 </div>
             </div>
-        </div>
+        </header>
     )
 }
 

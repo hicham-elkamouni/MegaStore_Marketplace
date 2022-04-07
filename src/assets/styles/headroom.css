@@ -1,0 +1,28 @@
+.headroom--pinned,
+.headroom--unpinned {
+	position: fixed !important;
+}
+
+.headroom {
+	will-change: transform;
+	background-color: inherit;
+	transition: all 0.15s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+	.headroom {
+		transition: none;
+	}
+}
+
+.headroom--pinned {
+	transform: translateY(0%);
+}
+
+.headroom--unpinned {
+	transform: translateY(-100%);
+}
+
+.headroom--not-top {
+	background-color: #fff !important;
+	box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+}
