@@ -1,5 +1,5 @@
 
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import Headroom from "headroom.js";
 
 const Header = () => {
@@ -10,12 +10,27 @@ const Header = () => {
         headroom.init();
     });
 
+    const sideBar = useRef<HTMLDivElement>(null);
+
+    const openSideBar = () => {
+        // show sideBare
+        if (sideBar.current) {
+            sideBar.current.style.display = "flex";
+        }
+    };
+    const closeSideBar = () => {
+        // hide sideBare
+        if (sideBar.current) {
+            sideBar.current.style.display = "none";
+        }
+    };
+
     return (
 
         <header>
             <div id='headroom' className='p-9 flex w-full justify-between align-baseline'>
 
-                <div className='md:hidden h-7 cursor-pointer'>
+                <div onClick={openSideBar} className='md:hidden h-7 cursor-pointer'>
                     <img className='h-full' src="https://img.icons8.com/ios-glyphs/90/000000/menu--v1.png" />
                 </div>
                 <div className="">
@@ -64,15 +79,37 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-            <div className='fixed w-full z-10 h-full flex'>
-                <div className='bg-white p-10  h-full w-[90%] sm:w-96'>
+            <div ref={sideBar} className='hidden fixed w-full z-10 h-full'>
+                <div className='bg-white p-10  h-full w-[400px]'>
                     <div className='flex justify-between'>
                         <div></div>
                         <h1 className="text-2xl font-bold">MEGASTORE</h1>
-                        <div className='my-auto'>
+                        <div onClick={closeSideBar} className='my-auto cursor-pointer'>
                             <img src="https://img.icons8.com/material-outlined/24/000000/delete-sign.png" />
                         </div>
                     </div>
+                    <div className='mt-12 h-[90%]'>
+                        <ul className="flex flex-col mt-4 px-6  ">
+                            <li className='flex items-center justify-between text-gray-600'>
+                                <a href="#" className="py-2 pr-4 pl-3 md:p-0 text-sm" aria-current="page">HOME</a>
+                                <img width={10} src="https://img.icons8.com/ios-glyphs/30/000000/sort-right.png" />
+                            </li>
+                            <li className='flex items-center justify-between text-gray-600'>
+                                <a href="#" className="py-2 pr-4 pl-3 md:p-0 text-sm" aria-current="page">SHOP</a>
+                                <img width={10} src="https://img.icons8.com/ios-glyphs/30/000000/sort-right.png" />
+                            </li>
+                            <li className='flex items-center justify-between text-gray-600'>
+                                <a href="#" className="py-2 pr-4 pl-3 md:p-0 text-sm" aria-current="page">ABOUT</a>
+                                <img width={10} src="https://img.icons8.com/ios-glyphs/30/000000/sort-right.png" />
+                            </li>
+                            <li className='flex items-center justify-between text-gray-600'>
+                                <a href="#" className="py-2 pr-4 pl-3 md:p-0 text-sm " aria-current="page">CONTACT</a>
+                                <img width={10} src="https://img.icons8.com/ios-glyphs/30/000000/sort-right.png" />
+                            </li>
+                        </ul>
+                    </div>
+                    <div className='bottom-0'>© 2021 MegaStore.
+                        All rights reserved.</div>
                 </div>
                 <div className='flex-1 z-40 h-full opacity-70 bg-black '>
 
