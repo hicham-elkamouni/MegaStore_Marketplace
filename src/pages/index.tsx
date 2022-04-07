@@ -1,65 +1,27 @@
-import type { NextPage } from 'next'
 import { Header } from '../components'
+import type { GetServerSideProps, NextPage } from 'next'
+import apolloClient from '../graphql/apolloClient';
+import { GetAllDocument } from '../graphql/generated';
 
-const Home: NextPage = () => {
+const Home: NextPage = (data:any) => {
+  console.log(data);
+  
   return (
     <div className='w-full'>
       <Header />
-      <p>Hello Next.js</p>
-      <div className='mt-36'>
-        <h1 className='text-lg'>yassine</h1>
-        <h1 className='text-lg'>yassine</h1>
-        <h1 className='text-lg'>yassine</h1>
-        <h1 className='text-lg'>yassine</h1>
-        <h1 className='text-lg'>yassine</h1>
-        <h1 className='text-lg'>yadssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssine</h1>
-        <h1 className='text-lg'>yassine</h1>
-        <h1 className='text-lg'>yassine</h1>
-        <h1 className='text-lg'>yassine</h1>
-        <h1 className='text-lg'>yassine</h1>
-        <h1 className='text-lg'>yassine</h1>
-        <h1 className='text-lg'>yassine</h1>
-        <h1 className='text-lg'>yassine</h1>
-        <h1 className='text-lg'>yassine</h1>
-        <h1 className='text-lg'>yassine</h1>
-        <h1 className='text-lg'>yassine</h1>
-        <h1 className='text-lg mt-8'>yassine</h1>
-        <h1 className='text-lg mt-8'>yassine</h1>
-        <h1 className='text-lg mt-8'>yassine</h1>
-        <h1 className='text-lg mt-8'>yassine</h1>
-        <h1 className='text-lg mt-8'>yassine</h1>
-        <h1 className='text-lg mt-8'>yassine</h1>
-        <h1 className='text-lg mt-8'>yassine</h1>
-        <h1 className='text-lg mt-8'>yassine</h1>
-        <h1 className='text-lg mt-8'>yassine</h1>
-        <h1 className='text-lg mt-8'>yassine</h1>
-        <h1 className='text-lg mt-8'>yassine</h1>
-        <h1 className='text-lg mt-8'>yassine</h1>
-        <h1 className='text-lg mt-8'>yassine</h1>
-        <h1 className='text-lg mt-8'>yassine</h1>
-        <h1 className='text-lg mt-8'>yassine</h1>
-        <h1 className='text-lg mt-8'>yassine</h1>
-        <h1 className='text-lg mt-8'>yassine</h1>
-        <h1 className='text-lg mt-8'>yassine</h1>
-        <h1 className='text-lg mt-8'>yassine</h1>
-        <h1 className='text-lg mt-8'>yassine</h1>
-        <h1 className='text-lg mt-8'>yassine</h1>
-        <h1 className='text-lg mt-8'>yassine</h1>
-        <h1 className='text-lg mt-8'>yassine</h1>
-        <h1 className='text-lg mt-8'>yassine</h1>
-        <h1 className='text-lg mt-8'>yassie</h1>
-        <h1 className='text-lg mt-8'>yassine</h1>
-        <h1 className='text-lg mt-8'>yassine</h1>
-        <h1 className='text-lg mt-8'>yassine</h1>
-        <h1 className='text-lg mt-8'>yassine</h1>
-        <h1 className='text-lg mt-8'>yassine</h1>
-        <h1 className='text-lg mt-8'>yassine</h1>
-        <h1 className='text-lg mt-8'>yassine</h1>
-        <h1 className='text-lg mt-8'>yassine</h1>
-        <h1 className='text-lg mt-8'>yassine</h1>
-      </div>
-    </div>
+    </div> 
   )
 }
+export const getServerSideProps: GetServerSideProps = async () => {
+  const  {data} = await apolloClient.query({
+    query: GetAllDocument,
+  });
+
+  return {
+    props: {
+      data: data?.getAll,
+    },
+  };
+};
 
 export default Home
