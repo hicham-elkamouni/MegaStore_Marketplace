@@ -1,10 +1,12 @@
 import type { NextPage } from 'next'
+import { Header } from '../components'
 
 const Home: NextPage = () => {
   return (
-    <div className="text-5xl">
-      <h1>Mega store app</h1>
-      </div>
+    <div className='w-full'>
+      <Header />
+      <p>Hello Next.js</p>
+    </div>
   )
 }
 
