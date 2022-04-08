@@ -1,10 +1,9 @@
 import type { NextPage } from 'next'
+import Section1 from '@/components/front-office/homePage/section1';
 
 const Home: NextPage = () => {
   return (
-    <div className="text-5xl">
-      <h1>Mega store app</h1>
-      </div>
+      <Section1></Section1>
   )
 }
 
