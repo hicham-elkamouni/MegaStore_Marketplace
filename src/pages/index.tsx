@@ -1,4 +1,6 @@
+
 import { Header, HeroSection } from '../components'
+import Section1 from '@/components/front-office/homePage/section1';
 import type { GetServerSideProps, NextPage } from 'next'
 import apolloClient from '../graphql/apolloClient';
 import { GetAllDocument } from '../graphql/generated';
@@ -7,11 +9,15 @@ const Home: NextPage = (data: any) => {
   console.log(data);
 
   return (
-    <div className='w-full'>
-      <Header />
-      <HeroSection />
+    <>
+      {/* <Section1></Section1> */}
+      <div className='w-full'>
+        <Header />
+        <HeroSection />
 
-    </div>
+      </div>
+    </>
+
   )
 }
 export const getServerSideProps: GetServerSideProps = async () => {

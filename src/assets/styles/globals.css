@@ -5,11 +5,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @import "./headroom.css";
 @import "./home.css";
+@import './cummun.css';
 
 *{
     font-family: 'Poppins', sans-serif;
 }
-
-
