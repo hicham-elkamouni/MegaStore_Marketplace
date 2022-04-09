@@ -1,9 +1,8 @@
-
-import { Header, HeroSection } from '../components'
 import Section1 from '@/components/front-office/homePage/section1';
 import type { GetServerSideProps, NextPage } from 'next'
 import apolloClient from '../graphql/apolloClient';
 import { GetAllDocument } from '../graphql/generated';
+import { Footer,Header, HeroSection } from '@/components/index';
 
 const Home: NextPage = (data: any) => {
   console.log(data);
@@ -14,7 +13,7 @@ const Home: NextPage = (data: any) => {
       <div className='w-full'>
         <Header />
         <HeroSection />
-
+        <Footer />
       </div>
     </>
 
