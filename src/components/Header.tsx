@@ -27,14 +27,14 @@ const Header = () => {
 
     return (
 
-        <header>
+        <header >
             {/* navbar */}
-            <div id='headroom' className='p-9 flex w-full justify-between align-baseline'>
+            <div id='headroom' className='p-9 flex w-full justify-between align-baseline z-50'>
                 <div onClick={openSideBar} className='md:hidden h-7 cursor-pointer'>
                     <img className='h-full' src="https://img.icons8.com/ios-glyphs/90/000000/menu--v1.png" />
                 </div>
                 <div className="">
-                    <h1 className="text-2xl font-bold">MEGASTORE</h1>
+                    <h1 className="text-2xl font-bold tracking-wider text-gray-700">MEGASTORE</h1>
                 </div>
                 <div className=" w-96 my-auto md:block hidden">
                     <ul className="flex  mt-4  md:space-x-8 md:mt-0 md:text-sm md:font-medium">
@@ -80,7 +80,7 @@ const Header = () => {
                 </div>
             </div>
             {/* sideBar */}
-            <div ref={sideBar} className='hidden fixed w-full z-50 h-full'>
+            <div ref={sideBar} className='hidden fixed w-full h-full z-50'>
                 <div className='bg-white p-10  h-full w-[400px]'>
                     <div className='flex justify-between'>
                         <div></div>
