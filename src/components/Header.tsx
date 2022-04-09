@@ -28,8 +28,8 @@ const Header = () => {
     return (
 
         <header>
+            {/* navbar */}
             <div id='headroom' className='p-9 flex w-full justify-between align-baseline'>
-
                 <div onClick={openSideBar} className='md:hidden h-7 cursor-pointer'>
                     <img className='h-full' src="https://img.icons8.com/ios-glyphs/90/000000/menu--v1.png" />
                 </div>
@@ -79,7 +79,8 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-            <div ref={sideBar} className='hidden fixed w-full z-10 h-full'>
+            {/* sideBar */}
+            <div ref={sideBar} className='hidden fixed w-full z-50 h-full'>
                 <div className='bg-white p-10  h-full w-[400px]'>
                     <div className='flex justify-between'>
                         <div></div>
