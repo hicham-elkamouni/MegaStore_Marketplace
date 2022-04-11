@@ -3,13 +3,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-<<<<<<< HEAD
 @import './cummun.css'
-
-=======
-
-@import "./headroom.css";
+@import './headroom.css';
 *{
     font-family: 'Poppins', sans-serif;
 }
->>>>>>> 87f793a124c26dfadbdbb554ae4ce5ced3d3b493
