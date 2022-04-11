@@ -1,0 +1,10 @@
+.heroSection{
+    /* background-image: url("../../assets/img/featured-ape-removebg-preview.png"); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    /* overflow: hidden; */
+}
