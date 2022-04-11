@@ -30,5 +30,16 @@ export const getServerSideProps: GetServerSideProps = async () => {
     },
   };
 };
+// export const getServerSideProps: GetServerSideProps = async () => {
+//   const { data } = await apolloClient.query({
+//     query: GetAllDocument,
+//   });
 
-export default Home
+//   return {
+//     props: {
+//       data: data?.getAll,
+//     },
+//   };
+// };
+
+export default Home;

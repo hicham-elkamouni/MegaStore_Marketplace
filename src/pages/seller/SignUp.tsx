@@ -163,4 +163,4 @@ const SignUp: NextPage = () => {
     </div>
   );
 };
-export { SignUp };
+export default  SignUp ;

@@ -21,8 +21,7 @@ const theme = createTheme();
 const SignIn: NextPage = () => {
   return (
     <div className="bg-gray-200 flex items-center justify-center min-h-screen">
-
-      <div className="bg-white p-8 rounded-md shadow-2xl " >
+      <div className="bg-white p-8 rounded-md shadow-2xl ">
         <ThemeProvider theme={theme}>
           <Container component="main" maxWidth="xs">
             <CssBaseline />
@@ -67,7 +66,6 @@ const SignIn: NextPage = () => {
                     control={<Checkbox value="remember" color="primary" />}
                     label="Remember me"
                     className="mb-6"
-
                   />
                   <button
                     type="button"
@@ -90,10 +88,7 @@ const SignIn: NextPage = () => {
           </Container>
         </ThemeProvider>
       </div>
-
     </div>
-
-
   );
 };
-export { SignIn };
+export default SignIn;
