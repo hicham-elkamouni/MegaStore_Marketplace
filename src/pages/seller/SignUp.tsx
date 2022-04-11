@@ -14,7 +14,7 @@ import { styled } from "@mui/material/styles";
 import Input from "@mui/material/Input";
 
 const theme = createTheme();
-const LoginForm: NextPage = () => {
+const SignUp: NextPage = () => {
   return (
     <div className="bg-gray-100  flex items-center justify-center min-h-screen">
       <div className="bg-white w-2/4 p-8 rounded-md shadow-2xl ">
@@ -132,17 +132,17 @@ const LoginForm: NextPage = () => {
             />
             <div className="flex items-center justify-center">
 
-                <p className="mr-6 ">Telecharger le document fiscale :</p>
-                       <Stack direction="row" alignItems="center" spacing={2}>
-              <label htmlFor="contained-button-file">
-                <input style={{'display':"none"}} type="file" accept="image/*" id="contained-button-file"/>
-                <Button variant="contained" component="span">
-                  Upload
-                </Button>
-              </label>
-            </Stack>
+              <p className="mr-6 ">Telecharger le document fiscale :</p>
+              <Stack direction="row" alignItems="center" spacing={2}>
+                <label htmlFor="contained-button-file">
+                  <input style={{ 'display': "none" }} type="file" accept="image/*" id="contained-button-file" />
+                  <Button variant="contained" component="span">
+                    Upload
+                  </Button>
+                </label>
+              </Stack>
             </div>
-     
+
 
             <div className="flex flex-col mb-6 w-full	">
               <FormControlLabel
@@ -163,4 +163,4 @@ const LoginForm: NextPage = () => {
     </div>
   );
 };
-export default LoginForm;
+export default  SignUp ;

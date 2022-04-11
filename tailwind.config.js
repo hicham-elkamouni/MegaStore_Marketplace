@@ -9,7 +9,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'poppins': ['Poppins', 'sans-serif'] 
+        'poppins': ['Poppins', 'sans-serif'],
+        "great-vibes": ['Great Vibes', 'cursive'],
       },
     },
   },
